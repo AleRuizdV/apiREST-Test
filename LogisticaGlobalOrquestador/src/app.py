@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from dotenv import load_dotenv
 import os
 from orquestador.orquestador_service import orquestar_servicio, obtener_informacion_servicio
@@ -20,4 +20,4 @@ def saludo():
     return jsonify({"mensaje": "¡Hola desde la API de Logística Global!"}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv("PORT"))
+    app.run(debug=True, port=int(os.getenv("PORT", 5000)))
