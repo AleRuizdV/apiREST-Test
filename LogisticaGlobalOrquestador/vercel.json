@@ -2,14 +2,14 @@
 "version": 2,
 "builds": [
     {
-    "src": "LogisticaGlobalOrquestador/scr/app.py",
+    "src": "LogisticaGlobalOrquestador/src/app.py",
     "use": "@vercel/python"
     }
 ],
 "routes": [
     {
     "src": "/(.*)",
-    "dest": "LogisticaGlobalOrquestador/scr/app.py"
+    "dest": "LogisticaGlobalOrquestador/src/app.py"
     }
 ]
 }
